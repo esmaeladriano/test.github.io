@@ -1,0 +1,12 @@
+/* Adicione estilos específicos para impressão */
+
+    
+    #dadosImprimir{
+        display: block !important;
+        
+    }
+    #btnImprimir,.atencao,#rodape,#dadosFormulario,#atencao{
+        display: none;
+    }
+  
+    

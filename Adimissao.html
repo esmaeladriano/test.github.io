@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inscrição IMPAR 2024/2025</title>
+<link href="logo-Impar.png" rel="icon" type="image/png" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="admissao1.css">
+<link rel="stylesheet" href="versao-impressao.css" media="print">
+</head>
+<body>
+
+<!-- Aqui vem o meu menu, o cabeçalho -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top nav-underline atencao" id="barra_navbar">
+
+<div class="container">
+<img width="10%" height="5%"  src="Loo-removebg-preview (1).png" alt="">
+<button class="navbar-toggler bg-white m" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse justify-content-center nav-fill" id="navbarNav">
+<ul class="navbar-nav ">
+<li class="nav-item">
+<a id="Home" class="nav-link link-dark" href="index.html">HOME</a>
+</li>
+</li>
+<li class="nav-item">
+<a class="nav-link link-dark" href="#">NOTÍCIAS</a>
+</li>
+<li class="nav-item">
+<a class="nav-link link-dark" href="#">GALERIA</a>
+</li>
+<li class="nav-item">
+<a class="nav-link link-dark" href="#">SOBRE O IMPAR</a>
+</li>
+<li class="nav-item dropdown ">
+<a class="nav-link link-dark dropdown-toggle" data-bs-toggle="dropdown" href="">CURSOS</a>
+<ul class="dropdown-menu">
+<li><a href="#" class="dropdown-item link-dark">ENFERMAGEM</a></li>
+<li><a href="#" class="dropdown-item link-dark">ANÁLISES CLÍNICAS</a></li>
+<li><a href="#" class="dropdown-item link-dark">FARMÁNCIA</a></li>
+<li><a href="#" class="dropdown-item link-dark">INFORMÁTICA</a></li>
+<li><a href="#" class="dropdown-item link-dark">ELETRICIDADE</a></li>
+</ul>
+</li>
+<li class="nav-item active">
+<a href="#"><button type="submit" class="btn btn-primary btn-adm"> ADIMISSÃO</button></a>
+</li>
+
+
+<li class="nav-item">
+
+<div class=" d-flex offset-10"> 
+<label for="portal"><img src="conectese.png" id="coneta"></label>
+<a class="nav-link link-dark d-flex align-items-center" href="#" target="_blank"> PORTAL<span>&nbsp;IMPAR</a></span></div>
+</li>
+</ul>
+</div>
+
+
+</div>
+</div>
+</nav>
+<div class="container p-1 inviseble "></div>
+<div class="p-5"></div>
+<div class="container text-center text-capitalize atencao"><h3>PREENCHA FICHA DE INSCRIÇÃO
+    <h6 id="nomeusuario"></h6>
+</h2></div>
+<!-- autocomplete="off" Depois devemos colocar o autocoplete off para evitar com que o usuariao repita os dados -->
+<div class="container">
+<div id="dadosFormulario">
+<form id="formularioAdmissao" class="needs-validation" novalidate>
+<div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
+<div class="col mt-3">
+<label for="Pnome">Nome Completo:</label>
+<input type="text" class="form-control" id="nome" placeholder="Primeiro Nome" required="required" pattern="(?=.*[a-z])(?=.*[A-Z]).{4,}">
+
+</div>
+<div class="col mt-3">
+<label for="data">Data de Nascimento:</label>
+<input type="date" class="form-control" id="data" required min="1975-01-01" max="2009-12-31" maxlength="10">
+</div>
+<div class="col mt-3">
+<label for="nomeP">Nome Completo do Pai:</label>
+<input type="text" class="form-control" id="nomeP" placeholder="Nome do pai" required="required" pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}">
+
+</div>
+<div class="col mt-3">
+<label for="nomeM">Nome Completo da Mãe:</label>
+<input type="text" class="form-control" id="nomeM" placeholder="Nome da mãe" required="required"  pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}">
+
+</div>  
+<div class="col mt-3">
+<label for="municipio">Naturalidade:</label>
+<input type="text" class="form-control" id="Naturalidade" required>
+</div>
+<div class="col mt-3">
+<label for="Província">Província de:</label>
+<input type="text" class="form-control" id="provincia" required>
+</div>
+<!-- falta ediçao -->
+<div class="col mt-3">
+<label for="Naturalidade">Município de:</label>
+<input type="text" class="form-control" id="municipio" required>
+</div>
+<!-- falta ediçao -->
+<div class="col mt-3">
+<label for="Naturalidade">Distrito de:</label>
+<input type="text" class="form-control" id="distrito" required>
+</div>
+<!-- falta ediçao -->
+<div class="col mt-3">
+<label for="Naturalidade">Residência Actual:</label>
+<input type="text" class="form-control" id="residenciaactual" required>
+</div>
+<div class="col mt-3">
+<label for="sexo">Sexo:</label>
+<select class="form-control" id="sexo" required>
+<option></option>
+<option >Femenino</option>
+<option >Masculino</option>
+</select>
+</div>
+<div class="col mt-3">
+<label for="BI">Nº do BI:</label>
+<div class="input-group mt-0">
+<span class="input-group-text">BI</span>
+<input type="text" class="form-control" id="BI" required placeholder="Bilhete de identidade" pattern="[0-9]{9}[A-Za-z]{2}[0-9]{3}">
+</div>
+</div>
+<div class="col mt-3">
+<label for="BI">Data de Emissão:</label>
+<input type="date" class="form-control" id="dataBI"  required placeholder="Data de emissão do BI">
+</div>
+<div class="col mt-3">
+<label for="estadocivil">Estado Civil:</label>
+<select class="form-control" id="estadocivil" required>
+<option></option>
+<option >Solteiro</option>
+<option >Casado</option>
+</select>
+<!-- <input type="text" class="form-control" id="estadocivil" required pattern=""> -->
+</div>
+<div class="col mt-3">
+<label for="email">Seu email:</label>
+<div class="input-group">
+<span class="input-group-text">@</span>
+<input type="text" class="form-control" id="email"  placeholder="Seu E-mail"
+pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+
+</div>
+</div>
+<div class="col mt-3">
+<label for="nf1">Contacto do Aluno(a):</label>
+<div class="input-group">
+<span class="input-group-text">+244</span>
+<input type="tel" class="form-control"  id="nf1" placeholder="Contacto do Aluno" maxlength="9" pattern="[0-9]{9}" >
+</div>
+</div>  
+<div class="col mt-3">
+<label for="nf2">Contacto Encarregado 1:</label>
+<div class="input-group">
+<span class="input-group-text">+244</span>
+<input type="tel" class="form-control"  id="nf2" placeholder="Contacto Encarregado 1" maxlength="9" pattern="[0-9]{9}" required>
+</div>
+</div>       
+<div class="col mt-3">
+<label for="nf3">Contacto Encarregado 2:</label>
+<div class="input-group">
+<span class="input-group-text">+244</span>
+<input type="tel" class="form-control"  id="nf3" placeholder="Contacto Encarregado 2" maxlength="9" pattern="[0-9]{9}" required>
+</div>
+</div>
+<div class="col mt-3">
+<label for="curso">Opçõe de curso:</label>
+<select class="form-control" id="curso" required>
+<option ></option>
+<option >Análises Clínicas</option>
+<option >Farmácia</option>
+<option >Eletricidade</option>
+<option >Enfermagem</option>
+<option>Técnico de Informática</option>
+</select>
+</div>
+<div class="col mt-3">
+<label for="periodo">Opções de Período:</label>
+<select class="form-control" id="periodo" required>
+<option ></option>
+<option >Manhã</option>
+<option >Tarde</option>
+</select>
+</div>
+<div class="col mt-3">
+<label for="instituicaoant">Instituição anterior:</label>
+<input type="text" class="form-control"  id="instituicaoant" required placeholder="Onde Estudastes a 9ª Classe">
+</div>
+<div class="col mt-3">
+<label for="nf2">A sigla da intituição é:</label>
+<input type="text" class="form-control" readonly value="IMPAR" style="background-color: rgb(241, 241, 227);">
+</div>
+
+
+
+
+<div class="container mt-5 botao">
+<div class="row justify-content-center">
+<div class="col-6 "><button type="button" id="validar" class="btn btn-primary" 
+    onclick="proximo()">Inscrever-se</button></div>
+<div class="col-6 text-end">
+<button type="button" id="exibir" onclick="exibirDados()" class="btn btn-primary" style="display: none;"> Exibir Dados</button>
+<!-- <button type="button" id="exibir" onclick="exibirDados()" class="btn btn-primary">Exibir Dados</button> -->
+</div>
+
+</div>
+</div>
+</form>
+</div>
+</div>
+
+<div id="dadosImprimir"   class=" " style="display: none;">
+<div class="row">
+<div class="text-center col-8">
+<p class="impar mt-5 mb-0 text-justify text-start">Rua Santo António, km 12 B (Estalagem na estrada da Moagem Kwaba)<br>
+Telemóveis: <b>922657508 / 998128383</b> <br>
+E-mail: impacaciasrubras@gmail.com
+</p>
+</div>
+
+<div class="col-4 text-lg-end text-center"><img src="Loo-removebg-preview (1).png" class="mt-3 img-fluid" width="100%" height="100%" alt=""></div>
+</div>
+
+<div class="p-4"></div>
+ <main class="">
+<h2 class="text-center"><b> FICHA DE INCRIÇÃO</b>
+  
+</h2>
+<div class="row border-end border-start border-top border-1 border-dark">
+<div class="col text-center"> <h4>NÚMERO DE INSCRIÇÃO</h4></div>
+<div class="col-4"><h4> /2024/2025</h4></div>
+</div>
+<div class="row border-top border-end border-start border-top border-1 border-dark">
+<div class="col">
+<b>Nome Completo:<b id="dadosNome"></b> </b>
+</div>
+</div>
+<div class="row  border-end border-start border-top border-1 border-dark">
+<div class="col-6"> Data de Nascimento: <b id="dadosData"></b> </div>
+<div class="col-6 border-start border-dark"> <b>Contactos Telefônicos</b></div>
+</div>
+<div class="row border-end border-start border-top border-1 border-dark">
+<div class="col ">Filho de: <b id="dadosPai"></b></div>
+<div class="col-6 border-start border-dark">Aluno(a) <b id="dadosnf1"></b></div>
+</div>
+<div class="row border-end border-start border-top border-1 border-dark">
+<div class="col"> E de: <b id="dadosMae"></b></div>
+<div class="col-6 border-start border-dark ">Encarregado 1 <b id="dadosnf2"></b>
+</div>
+</div>
+<div class="row border-end border-start border-top border-1 border-dark">
+<div class="col">Naturalidade: <b id="dadosnaturalidade"></b></div>
+<div class="col-6 border-start border-dark"> Encarregado 2 <b id="dadosnf3"></b></div>
+</div>
+<div class="row border-end border-start border-top border-1 border-dark">
+<div class="col "> Província de:<b id="dadosProvincia"></b></div>
+<div class="col-6 border-start border-dark"></div>
+</div>
+<div class="row border-end border-start border-top border-1 border-dark">
+<div class="col"> Município de: <b id="dadosmunicipio"></b></div>
+<div class="col-6 border-start border-dark"> Distrito de: <b id="dadosdistrito"></b></div>
+</div>
+<div class="row border-end border-start border-top border-1 border-dark">
+<div class="col "> Residência Actual: <b id="dadosresidencia"></b></div>
+<div  class="col-6 border-start border-dark">Sexo:<b id="dadosSexo"></b></div>
+</div>
+<div class="row border-end border-start border-top border-1 border-dark">
+<div class="col "> Portador do B.I.nº:<b id="dadosBI"></b></div>
+<div class="col-6 border-start border-dark">Data de Emissão <b id="dadosdataBI"></b></div>
+</div>
+<div class="row border-end border-start border-top border-1 border-dark">
+<div class="col Estado Civil">Estado Civil: <b id="dadosestado"></b></div>
+</div>
+<div class="row border-end border-start border-top border-1 border-dark">
+<div class="col"> E-mail: <b id="dadosemail"></b></div>
+</div>
+<div class="row border-end border-start border-top border-1 border-dark">
+<div class="col"> Opção do Curso: <b id="dadosopcao"></b></div>
+</div>
+<div class="row border-end border-start border-top border-1 border-dark">
+<div class="col"> Opção de período: <b id="dadosperiodo"></b></div>
+</div>
+<div class="row border-end border-start border-top border-1 border-dark border-bottom">
+<div class="col">Instituição Anterior: <b id="daosescolaantiga"></b></div>
+</div>
+<div class="row border-end border-start border-1 border-dark border-bottom">
+    <div class="col text-center text-justify"><h5>DECLARO QUE AS INFORMAÇÕES AQUI PRESTADAS SÃO VERDADEIRAS <input type="checkbox" name="aceito" id="aceito" class="form-check-inline"> </h5> </div>
+    </div>
+<div class="row border-end border-start border-1 border-dark border-bottom">
+<div class="col text-center text-justify">
+    <h5>Luanda / <script>document.write(new Date().getFullYear());</script> 
+
+</h5> </div>
+</div>
+<div class="row border-end border-start border-1 border-dark border-bottom">
+    <div class="col text-center text-justify pb-5 mt-3"><h5>
+        O Aluno/Encarregado
+    </h5> 
+</div>
+<div class="col pb-5 mt-3 text-center">
+    <h5>O duncionário</h5>
+</div>
+    </div>
+    <div class="col text-end" style="margin-top: 25%;">
+        <p>O Seu futuro é nosso destino</p>
+    </div>
+</main> 
+<button id="btnImprimir" class="btn btn-primary mt-5" onclick="imprimirDados()">Imprimir Dados</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="p-2"></div>
+<!-- ################################################### -->
+<!-- Aqui vem o rodapé -->
+
+<fooder id="rodape">
+<div class="container-fluid" style="background-color:rgb(109, 157, 235); ">
+<footer class="footer-area section-gap align-items-center">
+
+<div class="row justify-content-around">
+<div class="col-lg-2 col-md-4 col-sm-4 mt-2">
+<div class="single-footer-widget">
+<h5 class="text-white footer-texto-principal" style="border-bottom: 3px solid white;">Sobre Nós</h5>
+Rua Santo Antonio,Km 12B, Viana... <br>
+(+244) 922657508 | 998128383 </br>
+<a href="mailto:imparcaciasrubras@gmail.com">imparcaciasrubras@gmail.com</a>
+</div>
+</div>
+<div class="col-lg-2 col-md-4 col-sm-4 social-widget mt-2">
+<div class="single-footer-widget">
+<h5 class="text-white footer-texto-principal" style="border-bottom: 3px solid white;"> links Úteis</h5>
+<div class="">
+<div class="col"><a href="#" class="nav-link">NOTÍCIAS</a></div>
+<div class="col"><a href="#" class="nav-link">GALERIA</a></div>
+<div class="col"><a href="#" class="nav-link">SOBRE CURSOS</a></div>
+<div class="col"><a href="#" class="nav-link">SOBRE O IMPAR</a></div>
+<div class="col"><a href="#" class="nav-link">ACTIVIDADES</a></div>
+
+</div>
+</div>
+</div>
+
+<div class="col-lg-2 col-md-4 col-sm-4 social-widget mt-2">
+<div class="single-footer-widget">
+<h5 style="color: white;border-bottom: 3px solid white;"class="footer-texto-principal"> Cursos ministrados</h5>
+<div class="">
+<div class="col"><a href="#" class="nav-link">ENFERMAGEM</a></div>
+<div class="col"><a href="#" class="nav-link">ANÁLISES CLÍNICAS</a></div>
+<div class="col"><a href="#" class="nav-link">FARMÁNCIA</a></div>
+<div class="col"><a href="#" class="nav-link">INFORMÁTICA</a></div>
+<div class="col"><a href="#" class="nav-link">ELETRICIDADE</a></div>
+
+</div>
+</div>
+</div>
+
+<div class="col-lg-2 col-md-4 col-sm-3 social-widget mt-2">
+<div class="single-footer-widget">
+<h5 style="color: white;border-bottom: 3px solid white;" class="footer-texto-principal">Redes Sociais</h5>
+<div class="">
+<a href="#"><img src="facebook.png" alt="" width="50px" height="50px"></a> 
+<a href="#"><img src="whatapp.png" alt="" width="50px" height="50px"></a>
+<a href="#"><img src="Instragram.png" alt="" width="50px" height="50px"></a>
+<a href="#"></a>
+</div>
+</div>
+</div>  
+</div>
+<div class="row d-flex justify-content-center align-items-center footer-direito">
+<p class="footer-text text-center">
+<b>
+<h1 style="font-family: Georgia, 'Times New Roman', Times, serif; text-align: center; font-size: 15px; color: white;">   Copyright &copy; Todos os direitos reservado ao, IMPAR | <script>document.write(new Date().getFullYear());</script></h1>
+</b>
+</p>
+</div>
+</div>
+</footer>
+</div>
+</fooder>
+<script>
+   var nome = prompt('Qual é o seu nome?')
+   alert('Seja bem vindo '+ nome)
+   
+   document.getElementById('nomeusuario') = nome;
+</script>
+<script src="adimissao.js"></script> 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
+
